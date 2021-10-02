@@ -1,8 +1,8 @@
-// Javascript for Mario Kart Randomizer App
-// Two seperate APIs will be added
-// https://github.com/samyvera/mk8_node_api
-// & TBD
-// Pseudocode Below
+/* Javascript for Mario Kart Randomizer App
+Two seperate APIs will be added
+https://github.com/samyvera/mk8_node_api
+& TBD
+Pseudocode Below */
 
 // define variables in accordance with the html file
 
@@ -17,3 +17,27 @@
 // Place Code Here
 
 // Link APIs and Bulma library here - make sure to list BASE libraries first so that the additional ones will work
+
+// Buttons can be found here: https://bulma.io/documentation/elements/button/
+// Cards can be found here (could be used for where the character appears?): https://bulma.io/documentation/components/card/
+// Columns can be found here (could be used for 4 player spots on app): https://bulma.io/documentation/columns/basics/
+
+var characters = ["Mario", "Luigi", "Peach", "Toad", "Bowser", "Wario", "Waluigi", "Rosalina", "Daisy", "Bowser Jr.", "Toadette", "King Boo", "Baby Mario",
+                    "Baby Luigi", "Baby Rosalina", "Baby Peach", "Donkey Kong", "Yoshi", "Lakitu", "Iggy Koopa", "Lemmy Koopa", "Pink Gold Peach", "Metal Mario", "Link", "Isabelle",
+                    "Koopa Troopa", "Shy Guy", "Morton Koopa", "Roy Koopa", "Wendy Koopa", "Ludwig Koopa", "Mii", "Tanooki Mario", "Cat Peach", "Villager", "Dry Bowser", "Dry Bones"];
+
+// Generate a random character when the user clicks on the Generate button
+// Place Code Here
+
+// If the user is not happy with the generated character, allow them to re-click the button to run the function again
+//Place Code Here
+
+var vehicles = [""];
+
+// Generate a random vehicle when the user clicks on the Generate button
+// Place Code Here
+
+var courses = [""];
+// Generate a random course when the user clicks on the Generate button
+// Place Code Here
+
