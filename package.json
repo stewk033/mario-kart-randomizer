@@ -1,0 +1,22 @@
+{
+  "name": "mario-kart-randomizer",
+  "version": "1.0.0",
+  "description": "This application adds a new challenge to the classic Mario Kart game. Different categories can be selected or assigned randomly that tells the player which driver, kart, accessories, and race courses to pick. This can be useful for either one or two players. In the event both players select the same driver, a rock/paper/scissors scenario takes place to determine the winner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stewk033/mario-kart-randomizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stewk033/mario-kart-randomizer/issues"
+  },
+  "homepage": "https://github.com/stewk033/mario-kart-randomizer#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}

@@ -1,12 +1,12 @@
 # Mario Kart Randomizer
 
-This application gives the user the ability to...
+This application adds a new challenge to the classic Mario Kart game. Different categories can be selected or assigned randomly that tells the player which driver, kart, accessories, and race courses to pick. This can be useful for either one or two players. In the event both players select the same driver, a rock/paper/scissors scenario takes place to determine the winner.
 
 ## User Story
 
-AS AN 
-I WANT 
-SO THAT 
+AS A gamer looking for a challenging Mario Kart experience
+I WANT an app that allows me to be randomly assigned game specifications
+SO THAT my skills will be tested and improved within the game
 
 ## Acceptance Criteria
 
