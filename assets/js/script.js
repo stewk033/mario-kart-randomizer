@@ -4,10 +4,21 @@ https://github.com/samyvera/mk8_node_api
 & TBD
 Pseudocode Below */
 
+// Show current date at top of page
+Date()
+
 // define variables in accordance with the html file
 
 // if nothing is in localStorage, assign random character/car/course combination
 // Place Code Here
+
+window.localStorage.setItem('name', 'user');
+
+const person = {
+    name: 'user',
+}
+
+window.localStorage.setItem('user', JSON.stringify(person));
 
 // if there is a favorited character/car/course combination in localStorage, have that appear when user loads page
 // Place Code Here
@@ -41,3 +52,5 @@ var courses = [""];
 // Generate a random course when the user clicks on the Generate button
 // Place Code Here
 
+// If the user wishes to clear stored data, they press the "clear" button
+window.localStorage.clear();
