@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/stewk033/mario-kart-randomizer#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "moment": "^2.29.1"
   }
 }
