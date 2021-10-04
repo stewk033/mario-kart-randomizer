@@ -54,3 +54,61 @@ var courses = [""];
 
 // If the user wishes to clear stored data, they press the "clear" button
 window.localStorage.clear();
+
+
+
+
+
+var babyDrivers = document.querySelector(".babyDrivers")
+var allDrivers = document.querySelector(".allDrivers")
+var highEndDrivers = document.querySelector(".highEnd")
+var character = document.querySelector('.character')
+
+// random baby drivers
+babyDrivers.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/babies')
+        .then(response => response.json()) 
+        .then(data => {
+            var num = Math.floor(Math.random() * data.length)
+            var random = data[num]['name']
+
+            character.innerHTML= random
+
+
+           
+        })
+        
+})
+
+// random all drivers
+allDrivers.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers')
+        .then(response => response.json()) 
+        .then(data => {
+            var num = Math.floor(Math.random() * data.length)
+            var random = data[num]['name']
+
+            character.innerHTML= random
+
+
+        })
+        
+})
+
+// random high end drivers
+highEndDrivers.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/high_end')
+        .then(response => response.json()) 
+        .then(data => {
+            var num = Math.floor(Math.random() * data.length)
+            var random = data[num]['name']
+
+            character.innerHTML= random
+
+
+            console.log(num)
+            console.log(random)
+            console.log(data)
+        })
+        
+})
