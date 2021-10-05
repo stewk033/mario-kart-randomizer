@@ -12,7 +12,7 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
  .then(response => response.json()) 
  .then(json => console.log(json));
 
- // Mario KArt Playlist Search API / Spotify - IN PROGRESS
+ // Mario Kart Playlist Search API / Spotify - IN PROGRESS
  fetch('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist', {
      method: "GET",
      headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer BQD3sTEvwnaZU1A4QDhRKVQYQ118pC8fqjz3q1DRB2PCntVSklllfjT0FlZf150NK40DVmLrNekmM4cVpgKneu3dFUwpDUNmGETHz0xtlOFa7jXwMrRqoyWIVaWaE6MN-yoWe5I-C9_0AtyOm0LhdsfjuflnXiU"}
@@ -38,6 +38,21 @@ window.localStorage.setItem('user', JSON.stringify(person));
 
 // if there is a favorited character/car/course combination in localStorage, have that appear when user loads page
 // Place Code Here
+
+// random Mario Kart playlist rom Spotify
+var playlistSearch = document.querySelector(".playlist")
+
+playlistSearch.addEventListener('click', function() {
+    fetch ('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist')
+    .then(response => response.json())
+    .then(data => {
+        var num = Math.floor(Math.random() * data.length)
+        var random = data[num]['name']
+
+    playlist.innerHTML = random
+
+    })
+})
 
 // Enable buttons from Bulma to be used:
 // Buttons for "generate combination" & a button for "start over/clear"
