@@ -4,6 +4,16 @@ https://github.com/samyvera/mk8_node_api
 & TBD
 Pseudocode Below */
 
+// Mario Kart API
+fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
+	method: "GET",
+	headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer YOUR_BEARER"}
+})
+ .then(response => response.json()) 
+ .then(json => console.log(json));
+
+ 
+
 // Show current date at top of page
 Date()
 
@@ -33,22 +43,12 @@ window.localStorage.setItem('user', JSON.stringify(person));
 // Cards can be found here (could be used for where the character appears?): https://bulma.io/documentation/components/card/
 // Columns can be found here (could be used for 4 player spots on app): https://bulma.io/documentation/columns/basics/
 
-var characters = ["Mario", "Luigi", "Peach", "Toad", "Bowser", "Wario", "Waluigi", "Rosalina", "Daisy", "Bowser Jr.", "Toadette", "King Boo", "Baby Mario",
-                    "Baby Luigi", "Baby Rosalina", "Baby Peach", "Donkey Kong", "Yoshi", "Lakitu", "Iggy Koopa", "Lemmy Koopa", "Pink Gold Peach", "Metal Mario", "Link", "Isabelle",
-                    "Koopa Troopa", "Shy Guy", "Morton Koopa", "Roy Koopa", "Wendy Koopa", "Ludwig Koopa", "Mii", "Tanooki Mario", "Cat Peach", "Villager", "Dry Bowser", "Dry Bones"];
-
 // Generate a random character when the user clicks on the Generate button
 // Place Code Here
 
 // If the user is not happy with the generated character, allow them to re-click the button to run the function again
 //Place Code Here
 
-var vehicles = [""];
-
-// Generate a random vehicle when the user clicks on the Generate button
-// Place Code Here
-
-var courses = [""];
 // Generate a random course when the user clicks on the Generate button
 // Place Code Here
 
