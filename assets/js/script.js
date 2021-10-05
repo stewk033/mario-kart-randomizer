@@ -12,24 +12,13 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
  .then(response => response.json()) 
  .then(json => console.log(json));
 
- // Other API - IN PROGRESS
- var request = new XMLHttpRequest()
-
- request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
- request.onload = function () {
-   // Begin accessing JSON data here
-   var data = JSON.parse(this.response)
- 
-   if (request.status >= 200 && request.status < 400) {
-     data.forEach((movie) => {
-       console.log(movie.title)
-     })
-   } else {
-     console.log('error')
-   }
+ // Mario KArt Playlist Search API / Spotify - IN PROGRESS
+ fetch('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist'), {
+     method: "GET",
+     headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer YOUR-BEARER"}
  }
-
-request.send()
+    .then(response => response.json())
+    .then(json => console.log(json));
 
 // Show current date at top of page
 Date()
