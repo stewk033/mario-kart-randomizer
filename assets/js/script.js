@@ -15,7 +15,7 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
  // Mario Kart Playlist Search API / Spotify - IN PROGRESS
  fetch('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist', {
      method: "GET",
-     headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer BQD3sTEvwnaZU1A4QDhRKVQYQ118pC8fqjz3q1DRB2PCntVSklllfjT0FlZf150NK40DVmLrNekmM4cVpgKneu3dFUwpDUNmGETHz0xtlOFa7jXwMrRqoyWIVaWaE6MN-yoWe5I-C9_0AtyOm0LhdsfjuflnXiU"}
+     headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer BQAIfpYlCjWNkjm3U-OdzNwS5ygKXKSQsrrFYRDORzdF2k2rCrVj_NtcX0NVOKhMQanWNuBmobJWLD0ovK6Q5YeADCCYViELQbrBwjDB4WCkXKE1KlT2EqV2tGPozn8BqDl9rvYzzYwwVYoC4Wt_2nZNVGkQfc0"}
  })
     .then(response => response.json())
     .then(json => console.log(json));
@@ -40,7 +40,7 @@ window.localStorage.setItem('user', JSON.stringify(person));
 // Place Code Here
 
 // random Mario Kart playlist rom Spotify
-var playlistSearch = document.querySelector(".playlist")
+var playlistSearch = document.querySelector(".playlistSearch")
 
 playlistSearch.addEventListener('click', function() {
     fetch ('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist')
