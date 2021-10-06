@@ -4,6 +4,22 @@ https://github.com/samyvera/mk8_node_api
 & TBD
 Pseudocode Below */
 
+// Mario Kart API
+fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
+	method: "GET",
+	headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer YOUR_BEARER"}
+})
+ .then(response => response.json()) 
+ .then(json => console.log(json));
+
+ // Mario Kart Playlist Search API / Spotify - IN PROGRESS
+ fetch('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist', {
+     method: "GET",
+     headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer BQAIfpYlCjWNkjm3U-OdzNwS5ygKXKSQsrrFYRDORzdF2k2rCrVj_NtcX0NVOKhMQanWNuBmobJWLD0ovK6Q5YeADCCYViELQbrBwjDB4WCkXKE1KlT2EqV2tGPozn8BqDl9rvYzzYwwVYoC4Wt_2nZNVGkQfc0"}
+ })
+    .then(response => response.json())
+    .then(json => console.log(json));
+
 // Show current date at top of page
 Date()
 
@@ -23,6 +39,21 @@ window.localStorage.setItem('user', JSON.stringify(person));
 // if there is a favorited character/car/course combination in localStorage, have that appear when user loads page
 // Place Code Here
 
+// random Mario Kart playlist rom Spotify
+var playlistSearch = document.querySelector(".playlistSearch")
+
+playlistSearch.addEventListener('click', function() {
+    fetch ('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist')
+    .then(response => response.json())
+    .then(data => {
+        var num = Math.floor(Math.random() * data.length)
+        var random = data[num]['name']
+
+    playlist.innerHTML = random
+
+    })
+})
+
 // Enable buttons from Bulma to be used:
 // Buttons for "generate combination" & a button for "start over/clear"
 // Place Code Here
@@ -33,22 +64,12 @@ window.localStorage.setItem('user', JSON.stringify(person));
 // Cards can be found here (could be used for where the character appears?): https://bulma.io/documentation/components/card/
 // Columns can be found here (could be used for 4 player spots on app): https://bulma.io/documentation/columns/basics/
 
-var characters = ["Mario", "Luigi", "Peach", "Toad", "Bowser", "Wario", "Waluigi", "Rosalina", "Daisy", "Bowser Jr.", "Toadette", "King Boo", "Baby Mario",
-                    "Baby Luigi", "Baby Rosalina", "Baby Peach", "Donkey Kong", "Yoshi", "Lakitu", "Iggy Koopa", "Lemmy Koopa", "Pink Gold Peach", "Metal Mario", "Link", "Isabelle",
-                    "Koopa Troopa", "Shy Guy", "Morton Koopa", "Roy Koopa", "Wendy Koopa", "Ludwig Koopa", "Mii", "Tanooki Mario", "Cat Peach", "Villager", "Dry Bowser", "Dry Bones"];
-
 // Generate a random character when the user clicks on the Generate button
 // Place Code Here
 
 // If the user is not happy with the generated character, allow them to re-click the button to run the function again
 //Place Code Here
 
-var vehicles = [""];
-
-// Generate a random vehicle when the user clicks on the Generate button
-// Place Code Here
-
-var courses = [""];
 // Generate a random course when the user clicks on the Generate button
 // Place Code Here
 
