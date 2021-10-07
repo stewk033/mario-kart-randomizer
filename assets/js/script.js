@@ -14,8 +14,8 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
 
  // Mario Kart Playlist Search API / Spotify - IN PROGRESS
  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=mario+kart+music", {
-	"method": "GET",
-	"headers": {
+	method: "GET",
+	headers: {
 		"x-user-agent": "desktop",
 		"x-rapidapi-host": "google-search3.p.rapidapi.com",
 		"x-rapidapi-key": "69b564f0f1mshb07fa8261424345p1ad4fbjsn87bfd14a7d5e"
