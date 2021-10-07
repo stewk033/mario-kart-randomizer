@@ -74,62 +74,113 @@ playlistSearch.addEventListener('click', function() {
 // Place Code Here
 
 // If the user wishes to clear stored data, they press the "clear" button
-window.localStorage.clear();
+window.localStorage.clear(); 
 
 
 
 
 
-var babyDrivers = document.querySelector(".babyDrivers")
-var allDrivers = document.querySelector(".allDrivers")
-var highEndDrivers = document.querySelector(".highEnd")
-var character = document.querySelector('.character')
+var randomDriver = document.querySelector(".randomDriver")
+var listOfDrivers = document.querySelector(".listOfDrivers")
+var showList = document.querySelector(".showList")
+var listOfCourses = document.querySelector(".listOfCourses")
+var randomKart = document.querySelector(".randomKart")
+var randomCourse = document.querySelector(".randomCourse")
 
-// random baby drivers
-babyDrivers.addEventListener('click', function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/babies')
+
+
+var apiSearch = function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/super')
+        .then(response => response.json())
+}
+
+
+
+
+
+
+
+// list of all drivers
+listOfDrivers.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/super')
         .then(response => response.json()) 
         .then(data => {
-            var num = Math.floor(Math.random() * data.length)
-            var random = data[num]['name']
-
-            character.innerHTML= random
-
+            
+            for (let i= 0; i< data.length; i++) {
+                var driverName = data[i]['name']
+                var list = document.createElement('li')
+                var list = document.createElement('button')
+                list.textContent = driverName
+                showList.appendChild(list)
+               
+                console.log(driverName)
+            }
 
            
+
+            
+            // console.log(data)
         })
         
 })
+
+// var saveLikes.function(){
+//     listOfDrivers(this.textContent)
+//     console.log(this.textContent)
+// }
 
 // random all drivers
-allDrivers.addEventListener('click', function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers')
+randomDriver.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/super')
         .then(response => response.json()) 
         .then(data => {
             var num = Math.floor(Math.random() * data.length)
             var random = data[num]['name']
-
-            character.innerHTML= random
-
-
-        })
-        
-})
-
-// random high end drivers
-highEndDrivers.addEventListener('click', function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/high_end')
-        .then(response => response.json()) 
-        .then(data => {
-            var num = Math.floor(Math.random() * data.length)
-            var random = data[num]['name']
-
-            character.innerHTML= random
-
-
-            console.log(num)
             console.log(random)
-            console.log(data)
+            randomDriver.innerHTML= random
+
+
         })
         
 })
+
+listOfCourses.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal',{
+        method: "GET",
+        headers: {"Content-type": "application/json;charset=UTF-8"}
+    })
+        .then(response => response.json()) 
+        .then(data => {
+            
+            for (let i= 0; i< data.length; i++) {
+                var kartName = data[i]['name']
+                var listKart = document.createElement('li')
+                listKart.textContent = kartName
+                showList.appendChild(listKart)
+               
+                console.log(kartName)
+            }
+           
+
+            
+            // console.log(data)
+        
+        
+    })
+})
+randomCourse.addEventListener('click', function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal')
+        .then(response => response.json()) 
+        .then(data => {
+            var num = Math.floor(Math.random() * data.length)
+            var random = data[num]['name']
+            console.log(random)
+            randomCourse.innerHTML= random
+
+
+        })
+        
+})
+
+
+
