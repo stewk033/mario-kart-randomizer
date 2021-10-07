@@ -190,7 +190,6 @@ randomCourse.addEventListener('click', function(){
     randomCourseApi();
         
 })
-<<<<<<< HEAD
 // Defines 
 var random = localStorage.getItem("key");
 console.log("random");
@@ -213,5 +212,3 @@ console.log("localStorage.getItem");
 //   } else {
 //     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 //   }
-=======
->>>>>>> 0a8c69a4b711f3c6511cfcf6d710ab93fa3df7f3
