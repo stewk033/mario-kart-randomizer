@@ -21,7 +21,14 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
     .then(json => console.log(json));
 
 // Show current date at top of page
-Date()
+var currentdate = new Date();
+var dd = String(currentdate.getDate()).padStart(2, "0");
+var mm = String(currentdate.getMonth() + 1).padStart(2, "0");
+var yyyy = currentdate.getFullYear();
+
+currentdate = mm + "/" + dd + "/" + yyyy;
+console.log(currentdate);
+
 
 // define variables in accordance with the html file
 
