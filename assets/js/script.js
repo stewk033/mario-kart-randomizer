@@ -29,7 +29,14 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
 });
 
 // Show current date at top of page
-Date()
+var currentdate = new Date();
+var dd = String(currentdate.getDate()).padStart(2, "0");
+var mm = String(currentdate.getMonth() + 1).padStart(2, "0");
+var yyyy = currentdate.getFullYear();
+
+currentdate = mm + "/" + dd + "/" + yyyy;
+console.log(currentdate);
+
 
 // define variables in accordance with the html file
 
@@ -82,62 +89,129 @@ playlistSearch.addEventListener('click', function() {
 // Place Code Here
 
 // If the user wishes to clear stored data, they press the "clear" button
-window.localStorage.clear();
+window.localStorage.clear(); 
 
 
 
 
 
-var babyDrivers = document.querySelector(".babyDrivers")
-var allDrivers = document.querySelector(".allDrivers")
-var highEndDrivers = document.querySelector(".highEnd")
-var character = document.querySelector('.character')
+var randomDriver = document.querySelector(".randomDriver")
+var listOfDrivers = document.querySelector(".listOfDrivers")
+var showList = document.querySelector(".showList")
+var listOfCourses = document.querySelector(".listOfCourses")
+var randomKart = document.querySelector(".randomKart")
+var randomCourse = document.querySelector(".randomCourse")
 
-// random baby drivers
-babyDrivers.addEventListener('click', function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/babies')
-        .then(response => response.json()) 
-        .then(data => {
-            var num = Math.floor(Math.random() * data.length)
-            var random = data[num]['name']
-
-            character.innerHTML= random
-
-
+// list of all drivers function
+var listOfDriversApi = function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/super')
+    .then(response => response.json()) 
+    .then(data => {
+        
+        for (let i= 0; i< data.length; i++) {
+            var driverName = data[i]['name']
+            var list = document.createElement('li')
+            var list = document.createElement('button')
+            list.textContent = driverName
+            showList.appendChild(list)
            
-        })
+            console.log(driverName)
+        }
+    })
+}
+
+// list of all drivers event listener
+listOfDrivers.addEventListener('click', function(){
+    listOfDriversApi();
         
 })
 
-// random all drivers
-allDrivers.addEventListener('click', function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers')
+// random drivers function
+var randomDriverApi = function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/super')
         .then(response => response.json()) 
         .then(data => {
             var num = Math.floor(Math.random() * data.length)
             var random = data[num]['name']
-
-            character.innerHTML= random
-
-
-        })
-        
-})
-
-// random high end drivers
-highEndDrivers.addEventListener('click', function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/high_end')
-        .then(response => response.json()) 
-        .then(data => {
-            var num = Math.floor(Math.random() * data.length)
-            var random = data[num]['name']
-
-            character.innerHTML= random
-
-
-            console.log(num)
             console.log(random)
-            console.log(data)
+            randomDriver.innerHTML= random
+
+
         })
+}
+
+// random all drivers event listener
+randomDriver.addEventListener('click', function(){
+    randomDriverApi();  
+})
+
+
+// list of all the courses function
+var listOfCoursesApi = function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal')
+        
+    .then(response => response.json() 
+    .then(data => {
+        
+        for (let i= 0; i< data.length; i++) {
+            var kartName = data[i]['name']
+            var listKart = document.createElement('li')
+            listKart.textContent = kartName
+            showList.appendChild(listKart)
+           
+            console.log(kartName)
+        }
+    
+    }))
+}
+
+// list of courses event listener
+listOfCourses.addEventListener('click', function(){
+    listOfCoursesApi();
+    
+    })
+
+// random course function
+var randomCourseApi = function(){
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal')
+    .then(response => response.json()) 
+    .then(data => {
+        var num = Math.floor(Math.random() * data.length)
+        var random = data[num]['name']
+        console.log(random)
+        randomCourse.innerHTML= random
+
+
+    })
+}
+
+// random course event listener
+randomCourse.addEventListener('click', function(){
+    randomCourseApi();
         
 })
+<<<<<<< HEAD
+// Defines 
+var random = localStorage.getItem("key");
+console.log("random");
+
+// Stores the Information
+localStorage.setItem("random", randomDriver.addEventListener);
+console.log("localStorage.setItem");
+// Retrieves the Information
+document.getElementById = localStorage.getItem("random");
+console.log("localStorage.getItem");
+
+// let searchHistory = JSON.parse(localStorage.getItem("random"))
+
+// // Check browser support
+// if (typeof(Storage) !== "undefined") {
+//     // Store
+//     localStorage.setItem("random", "randomDriver");
+//     // Retrieve
+//     document.getElementById("result").innerHTML = localStorage.getItem("random");
+//   } else {
+//     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+//   }
+=======
+>>>>>>> 0a8c69a4b711f3c6511cfcf6d710ab93fa3df7f3
