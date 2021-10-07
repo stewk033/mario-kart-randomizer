@@ -35,4 +35,4 @@ SO THAT my skills will be tested and improved within the game
 
 ## Screenshots
 
-![MOCKUP](https://github.com/stewk033/mario-kart-randomizer/blob/ks-feature/html/assets/images/wannabe%20wireframe.pdf)
+![SCREENSHOT](https://github.com/stewk033/mario-kart-randomizer/blob/ks-feature/html/assets/images/wannabe%20wireframe.pdf)
