@@ -4,18 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/images/controller.png">
+    <title>Mario Kart Randomizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="http://fonts.cdnfonts.com/css/super-mario-bros-alphabet" rel="stylesheet">
 </head>
 <body>
-    <h1>Choose your category!!</h1>
+    <header>
+        <h1 class="is-size-1 is-uppercase">
+          <a>Mario Kart Randomizer</a>
+        </h1>
+        <div>
+            <h2>Choose Your Driver</h2>
+            <button>List of Drivers</button>
+            <button>Random Driver</button>
+        </div>
+        <div>
+            <h2>Choose Your Kart</h2>
+            <button>List of Karts</button>
+            <button>Random Kart</button>
+        </div>
+        <div>
+            <h2>Choose Your Glider</h2>
+            <button>List of Gliders</button>
+            <button>Random Glider</button>
+        </div>
+        <div>
+            <h2>Choose Your Wheels</h2>
+            <button>List of Wheels</button>
+            <button>Random Wheels</button>
+        </div>
+    </header>
 
-    <button class="allDrivers">All Drivers</button>
-    <button class="babyDrivers">Baby Drivers</button>
-    <button class="highEnd">High End Drivers</button>
+    <div>
+        <!--add CSS class to make h2 bold-->
+        <h2>Search for Mario Kart music here!</h2>
+        <form action="assets/script.js">
+            <label for="playlistSearch">Search here:</label>
+                <input type="text" id="playlist" value="playlistSearch">
+        </form>
+        <button class="playlistSearch">Search</button>
+    </div>
 
-    <div class='character'></div>
+    <footer>
+        <h2>Made with ❤️ by the Code Smashers.</h2>
+        <div>
 
-
+        </div>
+    </footer>
     <script src="assets/js/script.js"></script>
+    <script src="./assets/js/localStorage.js"></script>
 </body>
 </html>

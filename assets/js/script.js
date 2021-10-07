@@ -5,7 +5,14 @@ https://github.com/samyvera/mk8_node_api
 Pseudocode Below */
 
 // Show current date at top of page
-Date()
+var currentdate = new Date();
+var dd = String(currentdate.getDate()).padStart(2, "0");
+var mm = String(currentdate.getMonth() + 1).padStart(2, "0");
+var yyyy = currentdate.getFullYear();
+
+currentdate = mm + "/" + dd + "/" + yyyy;
+console.log(currentdate);
+
 
 // define variables in accordance with the html file
 
