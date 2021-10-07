@@ -181,6 +181,25 @@ randomCourse.addEventListener('click', function(){
         })
         
 })
+// Defines 
+var random = localStorage.getItem("key");
+console.log("random");
 
+// Stores the Information
+localStorage.setItem("random", randomDriver.addEventListener);
+console.log("localStorage.setItem");
+// Retrieves the Information
+document.getElementById = localStorage.getItem("random");
+console.log("localStorage.getItem");
 
+// let searchHistory = JSON.parse(localStorage.getItem("random"))
 
+// // Check browser support
+// if (typeof(Storage) !== "undefined") {
+//     // Store
+//     localStorage.setItem("random", "randomDriver");
+//     // Retrieve
+//     document.getElementById("result").innerHTML = localStorage.getItem("random");
+//   } else {
+//     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+//   }
