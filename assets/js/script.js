@@ -124,10 +124,10 @@ listOfDrivers.addEventListener('click', function(){
         
 })
 
-var saveLikes.function(){
-    listOfDrivers(this.textContent)
-    console.log(this.textContent)
-}
+// var saveLikes.function(){
+//     listOfDrivers(this.textContent)
+//     console.log(this.textContent)
+// }
 
 // random all drivers
 randomDriver.addEventListener('click', function(){
