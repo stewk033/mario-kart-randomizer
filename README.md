@@ -20,11 +20,19 @@ SO THAT my skills will be tested and improved within the game
 * Gabrielle Donald
     - JavaScript and API's
     - [GITHUB](https://github.com/gabriellenoelle)
-* Kevin Stewart     [GITHUB](https://github.com/stewk033)
-* Lissette Vega     [GITHUB](https://github.com/lvega7)
-* Riley Lathan      [GITHUB](https://github.com/rileylathan)
-* Clayton Hooppaw   [GITHUB](https://github.com/TonofClay93)
+* Kevin Stewart
+    - Repository and HTML Setup
+    - [GITHUB](https://github.com/stewk033)
+* Lissette Vega
+    - JavaScript and API's
+    - [GITHUB](https://github.com/lvega7)
+* Riley Lathan
+    - Styling with CSS/Bulma
+    - [GITHUB](https://github.com/rileylathan)
+* Clayton Hooppaw
+    - Styling with CSS/Bulma
+    - [GITHUB](https://github.com/TonofClay93)
 
 ## Screenshots
 
-![MOCKUP]()
+![MOCKUP](https://github.com/stewk033/mario-kart-randomizer/blob/ks-feature/html/assets/images/wannabe%20wireframe.pdf)
