@@ -13,16 +13,29 @@ fetch('https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario', {
  .then(json => console.log(json));
 
  // Mario Kart Playlist Search API / Spotify - IN PROGRESS
-
- fetch('https://api.spotify.com/v1/search?q=mario%20kart&type=playlist', {
-     method: "GET",
-     headers: {"Content-type": "application/json;charset=UTF-8", "authorization": "Bearer BQAIfpYlCjWNkjm3U-OdzNwS5ygKXKSQsrrFYRDORzdF2k2rCrVj_NtcX0NVOKhMQanWNuBmobJWLD0ovK6Q5YeADCCYViELQbrBwjDB4WCkXKE1KlT2EqV2tGPozn8BqDl9rvYzzYwwVYoC4Wt_2nZNVGkQfc0"}
- })
-    .then(response => response.json())
-    .then(json => console.log(json));
+ fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=mario+kart+music", {
+	"method": "GET",
+	"headers": {
+		"x-user-agent": "desktop",
+		"x-rapidapi-host": "google-search3.p.rapidapi.com",
+		"x-rapidapi-key": "69b564f0f1mshb07fa8261424345p1ad4fbjsn87bfd14a7d5e"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
 
 // Show current date at top of page
-Date()
+var currentdate = new Date();
+var dd = String(currentdate.getDate()).padStart(2, "0");
+var mm = String(currentdate.getMonth() + 1).padStart(2, "0");
+var yyyy = currentdate.getFullYear();
+
+currentdate = mm + "/" + dd + "/" + yyyy;
+console.log(currentdate);
 
  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=mario+kart+music", {
 	"method": "GET",
