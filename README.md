@@ -17,7 +17,9 @@ SO THAT my skills will be tested and improved within the game
 
 ## Credits
 
-* Gabrielle Donald  [GITHUB](https://github.com/gabriellenoelle)
+* Gabrielle Donald
+    - JavaScript and API's
+    - [GITHUB](https://github.com/gabriellenoelle)
 * Kevin Stewart     [GITHUB](https://github.com/stewk033)
 * Lissette Vega     [GITHUB](https://github.com/lvega7)
 * Riley Lathan      [GITHUB](https://github.com/rileylathan)
