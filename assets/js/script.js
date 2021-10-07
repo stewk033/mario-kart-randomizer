@@ -325,4 +325,3 @@ console.log("localStorage.getItem");
 //   } else {
 //     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 //   }
-
