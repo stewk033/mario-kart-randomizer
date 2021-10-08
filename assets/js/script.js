@@ -182,7 +182,9 @@ listOfDrivers.addEventListener('click', function(){
 // }
 
 // random all drivers
-randomDriver.addEventListener('click', function(){
+// randomDriver.addEventListener('click', function(){
+//     randomDriverApi();
+// })
 
 // list of all drivers function
 var listOfDriversApi = function(){
@@ -263,7 +265,7 @@ randomCourse.addEventListener('click', function(){
         
 })
 
-})
+
 
 // random all drivers event listener
 randomDriver.addEventListener('click', function(){
@@ -311,10 +313,10 @@ var randomCourseApi = function(){
 }
 
 // random course event listener
-randomCourse.addEventListener('click', function(){
-    randomCourseApi();
+// randomCourse.addEventListener('click', function(){
+//     randomCourseApi();
         
-})
+// })
 
 // Defines 
 var random = localStorage.getItem("key");
