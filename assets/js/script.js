@@ -261,6 +261,33 @@ listOfCourses.addEventListener('click', function(){
     listOfCoursesApi();
 })
 
+
+
+var courseList = [];
+// random course function
+var randomCourseApi = function(){
+    var random;
+    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal')
+    .then(response => response.json()) 
+    .then(data => {
+        var num = Math.floor(Math.random() * data.length)
+        random = data[num]['name']
+        console.log(random)
+        randomCourse.innerHTML= random
+        courseList.push(random);
+        console.log(courseList);
+
+
+    })
+    return random;
+}
+
+// random course event listener
+randomCourse.addEventListener('click', function(){
+    randomCourseApi()
+})
+
+// recent courses event listener
 saveCourse.addEventListener('click', function(){
         
     localStorage.setItem('course', JSON.stringify(courseList))
@@ -275,26 +302,11 @@ saveCourse.addEventListener('click', function(){
     list.textContent = courseList
     showList.appendChild(list)
 
-})
+    if (list>5){
+        
 
-var courseList = [];
-// random course function
-var randomCourseApi = function(){
-    fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal')
-    .then(response => response.json()) 
-    .then(data => {
-        var num = Math.floor(Math.random() * data.length)
-        var random = data[num]['name']
-        console.log(random)
-        randomCourse.innerHTML= random
+    }
 
-
-    })
-}
-
-// random course event listener
-randomCourse.addEventListener('click', function(){
-    randomCourseApi()
 })
 
 
