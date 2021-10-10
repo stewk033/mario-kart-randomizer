@@ -1,7 +1,6 @@
 
 * {
-    font-family: 'New Super Mario Font U', sans-serif;
-                                                
+    font-family: 'New Super Mario Font U', sans-serif;                                              
 }
 
 html {
@@ -19,4 +18,15 @@ html {
 img {
     width: 30px;
     height: auto;
+}
+
+h1  {
+    color: #172774;
+}
+h2 {
+    color: red;
+}
+​
+#btn {
+    background-color: #77D970;
 }
