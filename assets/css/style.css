@@ -1,4 +1,9 @@
 
+* {
+    font-family: 'New Super Mario Font U', sans-serif;
+                                                
+}
+
 html {
     background: url(../images/mariokarttour.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -14,8 +19,4 @@ html {
 img {
     width: 30px;
     height: auto;
-
-* {
-    font-family: "Super Mario Bros Alphabet";
-
 }

@@ -89,7 +89,7 @@ playlistSearch.addEventListener('click', function() {
 
     // playlist.innerHTML = random
 
-    })
+    // })
 
 
 
@@ -210,7 +210,7 @@ var randomDriverApi = function(){
         })
 
         
-})
+}
 
 listOfCourses.addEventListener('click', function(){
     fetch ('https://mario-kart-tour-api.herokuapp.com/api/v1/courses/normal',{
@@ -249,8 +249,6 @@ randomCourse.addEventListener('click', function(){
         })
         
 })
-
-}
 
 // random all drivers event listener
 randomDriver.addEventListener('click', function(){
