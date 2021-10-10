@@ -1,9 +1,3 @@
-/* Javascript for Mario Kart Randomizer App
-Two seperate APIs will be added
-https://github.com/samyvera/mk8_node_api
-& TBD
-Pseudocode Below */
-
 // Mario Kart API
 fetch("https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario", {
   method: "GET",
@@ -15,22 +9,7 @@ fetch("https://mario-kart-tour-api.herokuapp.com/api/v1/drivers/name?q=mario", {
   .then((response) => response.json())
   .then((json) => console.log(json));
 
-// Mario Kart Playlist Search API / Spotify - IN PROGRESS
-
-fetch("https://api.spotify.com/v1/search?q=mario%20kart&type=playlist", {
-  method: "GET",
-  headers: {
-    "Content-type": "application/json;charset=UTF-8",
-    authorization:
-      "Bearer BQAIfpYlCjWNkjm3U-OdzNwS5ygKXKSQsrrFYRDORzdF2k2rCrVj_NtcX0NVOKhMQanWNuBmobJWLD0ovK6Q5YeADCCYViELQbrBwjDB4WCkXKE1KlT2EqV2tGPozn8BqDl9rvYzzYwwVYoC4Wt_2nZNVGkQfc0",
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-
-// Show current date at top of page
-Date();
-
+// Google Search for Mario Music API
 fetch(
   "https://google-search3.p.rapidapi.com/api/v1/search/q=mario+kart+music",
   {
@@ -57,6 +36,8 @@ var yyyy = currentdate.getFullYear();
 
 currentdate = mm + "/" + dd + "/" + yyyy;
 console.log(currentdate);
+// Show current date at top of page
+Date();
 
 // define variables in accordance with the html file
 
@@ -91,44 +72,25 @@ playlistSearch.addEventListener("click", function () {
     .then((response) => response.json())
     .then((data) => {
       console.log(JSON.stringify(data.results));
-      var musicResults = data.results;
+      let musicResults = data.results;
+      let youtubeUrl = musicResults[0].link + "&output=embed";
       console.log(musicResults[0].link);
-      var youtubeUrl = musicResults[0].link;
+      const embeddedVideo = $("<iframe>").attr("src", youtubeUrl);
+      embeddedVideo.attr("target", "_parent");
+      $("#container").append(embeddedVideo);
     });
 
-  let str = "https://www.youtube.com/embed/bectDbhMJ5s";
-  document.getElementById(
-    "https://www.youtube.com/embed/bectDbhMJ5s"
-  ).innerHTML = str.slice(30, 40);
-
-  document.getElementById("https://www.youtube.com/embed/" + str.slice);
-
-  function prepareFrame() {
-    var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", "https://www.youtube.com/embed/" + str.slice);
-    ifrm.style.width = "640px";
-    ifrm.style.height = "480px";
-    document.body.appendChild(ifrm);
-  }
+  //   function prepareFrame() {
+  //     var ifrm = document.createElement("iframe");
+  //     ifrm.setAttribute(
+  //       "src",
+  //       "https://www.youtube.com/embed/" + str.slice(30, 40)
+  //     );
+  //     ifrm.style.width = "640px";
+  //     ifrm.style.height = "480px";
+  //     document.body.appendChild(ifrm);
+  //   }
 });
-// Enable buttons from Bulma to be used:
-// Buttons for "generate combination" & a button for "start over/clear"
-// Place Code Here
-
-// Link APIs and Bulma library here - make sure to list BASE libraries first so that the additional ones will work
-
-// Buttons can be found here: https://bulma.io/documentation/elements/button/
-// Cards can be found here (could be used for where the character appears?): https://bulma.io/documentation/components/card/
-// Columns can be found here (could be used for 4 player spots on app): https://bulma.io/documentation/columns/basics/
-
-// Generate a random character when the user clicks on the Generate button
-// Place Code Here
-
-// If the user is not happy with the generated character, allow them to re-click the button to run the function again
-//Place Code Here
-
-// Generate a random course when the user clicks on the Generate button
-// Place Code Here
 
 // If the user wishes to clear stored data, they press the "clear" button
 window.localStorage.clear();
