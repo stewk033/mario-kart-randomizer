@@ -7,9 +7,19 @@
     <link rel="icon" type="image/png" href="assets/images/controller.png">
     <title>Mario Kart Randomizer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <link href="http://fonts.cdnfonts.com/css/super-mario-bros-alphabet" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body> 
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="http://fonts.cdnfonts.com/css/super-mario-bros-alphabet" rel="stylesheet">
+
+</head>
 <body>
+
     <header>
         <h1 class="is-size-1 is-uppercase">
           <a>Mario Kart Randomizer</a>
@@ -21,6 +31,8 @@
             <ul class="showList"></ul>
         </div>
         <div>
+
+
             <h2>Choose Your Course</h2>
             <button class="listOfCourses">List of Courses</button>
             <button class="randomCourse">Random Courses</button>
@@ -33,18 +45,55 @@
         <h2>Search for Mario Kart music here!</h2>
         <form action="assets/script.js">
             <label for="playlistSearch">Search here:</label>
+
+                <input type="text" id="playlist" value="playlistSearch">
+
                 <input type="text" id="playlist">
+
         </form>
-        <button class="playlistSearch">Search</button>
+      <button class="playlistSearch">Search</button>
     </div>
 
     <footer>
         <h2>Made with ❤️ by the Code Smashers.</h2>
-        <div>
-
+        <br>
+            <h2>Your Coders:</h2>
+            <div style="display:inline-block; vertical-align:top;">
+                <img src="assets/images/mario.png" alt="img"/>
+            </div>
+            <div style="display:inline-block;">
+                <h2>Kevin</h2>
+            </div><br>
+            <div style="display:inline-block; vertical-align:top;">
+                <img src="assets/images/yoshi.png" alt="img"/>
+            </div>
+            <div style="display:inline-block;">
+                <h2>Clayton</h2>
+            </div><br>
+            <div style="display:inline-block; vertical-align:top;">
+                <img src="assets/images/isabelle.png" alt="img"/>
+            </div>
+            <div style="display:inline-block;">
+                <h2>Gabrielle</h2>
+            </div><br>
+            <div style="display:inline-block; vertical-align:top;">
+                <img src="assets/images/luigi.png" alt="img"/>
+            </div>
+            <div style="display:inline-block;">
+                <h2>Riley</h2>
+            </div><br>
+            <div style="display:inline-block; vertical-align:top;">
+                <img src="assets/images/koopatroopa.png" alt="img"/>
+            </div>
+            <div style="display:inline-block;">
+                <h2>Lissette</h2>
+            </div>
+            
         </div>
     </footer>
+
     <script src="assets/js/script.js"></script>
-    <script src="./assets/js/localStorage.js"></script>
+    <script src="assets/js/localStorage.js"></script>
+
 </body>
-</html> 
+</html>
