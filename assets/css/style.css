@@ -1,11 +1,16 @@
 h1  {
-    color: #172774;
+    color: #112172;
 }
 h2 {
-    color: red;
+    color: rgb(216, 33, 33);
 }
 #btn {
-    background-color: #77D970;
+    background-color: #2d4ac0;
+    color: white;
+}
+
+* {
+    font-family: 'New Super Mario Font U', sans-serif;                                              
 }
 
 html {
@@ -15,10 +20,6 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
-
-/* * {
-    font-family: "Super Mario Bros Alphabet";
-} */
 
 img {
     width: 30px;
