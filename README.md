@@ -1,6 +1,6 @@
 # Mario Kart Randomizer
 
-This application adds a new challenge to the classic Mario Kart game. Different categories can be selected or assigned randomly that tells the player which driver, kart, accessories, and race courses to pick. This can be useful for either one or two players. In the event both players select the same driver, a rock/paper/scissors scenario takes place to determine the winner.
+This application adds a new challenge to the classic Mario Kart game. Different categories can be selected or assigned randomly that tells the player which driver and race courses to pick. Player selections will be stored for future reference. There is also a nifty music search feature that allows players to listen to their favorite Super Mario music while they play!
 
 ## User Story
 
@@ -10,10 +10,18 @@ SO THAT my skills will be tested and improved within the game
 
 ## Acceptance Criteria
 
-* _GIVEN _
-* _WHEN _
-* _THEN _
-
+* _GIVEN I want to see a list of drivers/courses_
+* _WHEN I select the List of Drivers or List of Courses button_
+* _THEN a list of drivers/courses is displayed_
+* _GIVEN I want to have a driver/course randomly assigned to me_
+* _WHEN I select the Random Driver or Random Course button_
+* _THEN a random driver/course is displayed_
+* _GIVEN I want to see a list of drivers/courses recently assigned_
+* _WHEN I select the Recent Drivers or Recent Courses button_
+* _THEN my recent drivers/courses are displayed_
+* _GIVEN I want to hear Mario music while visiting the site_
+* _WHEN I search for a song title and select Search_
+* _THEN a music selection will be returned for me to hear_
 
 ## Credits
 
@@ -35,9 +43,9 @@ SO THAT my skills will be tested and improved within the game
 
 ## Screenshots
 
-![MOCKUP](https://github.com/stewk033/mario-kart-randomizer/blob/ks-feature/html/assets/images/wireframe.pdf)
+![MOCKUP](https://github.com/stewk033/mario-kart-randomizer/blob/main/assets/images/wireframe.png)
 
-![SCREENSHOT]()
+![SCREENSHOT](https://github.com/stewk033/mario-kart-randomizer/blob/main/assets/images/screenshot.png)
 
 ## Our Solution
 
