@@ -1,27 +1,59 @@
 h1  {
     color: #112172;
-  }
-  h2 {
+}
+
+h2 {
     color: rgb(216, 33, 33);
-  }
-  #btn {
+}
+
+#btn {
     background-color: #2d4ac0;
     color: white;
-  }
+}
   
-  * {
+* {
     font-family: 'New Super Mario Font U', sans-serif;                                              
-  }
+}
   
-  html {
+html {
     background: url(../images/mariokarttour.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
   
-  img {
+img {
     width: 30px;
     height: auto;
-  }
+}
+
+@media (max-width: 411px) {
+    .header {
+        width: 100%;
+    }
+    .column {
+        width: 50%;
+    }
+    .columns {
+        width: 100%;
+    }
+    .search-engine {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        width: 100%;
+    }
+    .column {
+        width: 50%;
+    }
+    .columns {
+        width: 100%;
+    }
+    .search-engine {
+        width: 100%;
+    }
+}
