@@ -1,35 +1,18 @@
-h1  {
-    color: #172774;
-}
-h2 {
-    color: #FF0075;
-}
-#btn {
-    background-color: #77D970;
-}
-
-html {
-    background: url(../images/mariokarttour.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/* * {
-    font-family: "Super Mario Bros Alphabet";
-} */
-
-img {
-    width: 30px;
-    height: auto;
-
 * {
-    font-family: "Super Mario Bros Alphabet";
+    font-family: "New Super Mario Font U", sans-serif;
     
 
 }
 
+h1  {
+    color: #172774;
+}
+h2 {
+    color: #FF0075;
+}
+#btn {
+    background-color: #77D970;
+}
 
 html {
     background: url(../images/mariokarttour.jpeg) no-repeat center center fixed;
@@ -38,43 +21,45 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+
 /* * {
     font-family: "Super Mario Bros Alphabet";
 } */
+
 img {
     width: 30px;
     height: auto;
-* {
-    font-family: "Super Mario Bros Alphabet";
 }
-h1  {
-    color: #172774;
+
+@media (max-width: 411px) {
+    .header {
+        width: 100%;
+    }
+
+    .column {
+        width: 50%;
+    }
+    .columns {
+        width: 100%;
+    }
+    .search-engine {
+        width: 100%;
+    }
 }
-h2 {
-    color: #FF0075;
+
+@media (max-width: 1024px) {
+    .header {
+        width: 100%;
+    }
+
+    .column {
+        width: 50%;
+    }
+    .columns {
+        width: 100%;
+    }
+    .search-engine {
+        width: 100%;
+    }
 }
-​
-#btn {
-    background-color: #77D970;
-}
-​
-html {
-    background: url(../images/mariokarttour.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-​
-/* * {
-    font-family: "Super Mario Bros Alphabet";
-} */
-​
-img {
-    width: 30px;
-    height: auto;
-​
-* {
-    font-family: "Super Mario Bros Alphabet";
-​
-}
+
