@@ -1,21 +1,27 @@
-
-html {
+h1  {
+    color: #112172;
+  }
+  h2 {
+    color: rgb(216, 33, 33);
+  }
+  #btn {
+    background-color: #2d4ac0;
+    color: white;
+  }
+  
+  * {
+    font-family: 'New Super Mario Font U', sans-serif;                                              
+  }
+  
+  html {
     background: url(../images/mariokarttour.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-/* * {
-    font-family: "Super Mario Bros Alphabet";
-} */
-
-img {
+  }
+  
+  img {
     width: 30px;
     height: auto;
-
-* {
-    font-family: "Super Mario Bros Alphabet";
-
-}
+  }
